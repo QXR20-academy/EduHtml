@@ -54,10 +54,17 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<!--Metaetiquetas de Redirección y Control de Cache.
 			Redirección: http-equiv: "refresh" / content: Tiempo en segundos y URL de redirección.-->
 			<meta http-equiv="refresh" content="30;url=http://www.ejemplo.com/">
-			<!--Control de Cache: http-equiv: "cache-control", "pragma", "expires" / content: Configuraciones para el control del cache del navegador.-->
+			<!--Control de Cache: http-equiv: "cache-control", "pragma", "expires" / content: Configuraciones para el control del cache del navegador.
+			no-cache: Requiere que la caché revalide con el servidor antes de usar la versión almacenada.
+			no-store: No almacena ninguna versión en caché.
+			must-revalidate: Fuerza a la caché a revalidar después de que el recurso ha expirado.
+			max-age: Especifica el tiempo máximo (en segundos) que un recurso se considera fresco.
+			ETag (Entity Tag): El encabezado ETag proporciona un identificador único para una versión específica de un recurso, permitiendo la validación condicional.-->
 			<meta http-equiv="cache-control" content="no-cache">
 			<meta http-equiv="pragma" content="no-cache">
-			<meta http-equiv="expires" content="0">
+			<meta http-equiv="expires" content="Wed, 21 Oct 2023 07:28:00 GMT">
+			<meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate, max-age=3600">
+			<meta http-equiv="etag" content="33a64df551425fcc55e4d42a148795d9f25f89d4"><!--Mejor en htaccess-->
 			<!--Metaetiquetas de Redes Sociales y Compartición.
 			Facebook Open Graph: property: "og", "og", "og", "og" / content: Título, descripción, imagen y URL para la compartición en Facebook.-->
 			<meta property="og:title" content="Título del contenido">
