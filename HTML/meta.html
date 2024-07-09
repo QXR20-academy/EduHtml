@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!----------------------------------------------------------------------------------------------------------------
+
+Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
+
+------------------------------------------------------------------------------------------------------------------
+
+			/***************************************************************************
+			*                                                                          *
+			*  Copyright (c) Jordi Martos (@PublicAudiovisual XR)                      *
+			*  Todos los derechos reservados.                                          *
+			*                                                                          *
+			*  AVISO: Aunque QXR20.academy (2D) sigue siendo un proyecto educativo,    *
+			*         ya no es código abierto ni de dominio público.                   *
+			*         EsteNameScript ahora se rige por el Acuerdo de licencia de uso   *
+			*         final de la Academia de PublicAudiovisual XR.                    *
+			*                                                                          * 
+			*  Toda la información contenida en este documento es y seguirá siendo     *
+			*  propiedad de Jordi Martos.                                              *
+			*  Los conceptos intelectuales y técnicos contenidos en este documento     *
+			*  son propiedad de Jordi Martos y están protegidos por las leyes de       *
+			*  derechos de autor.                                                      *
+			*  La difusión de esta información o reproducción de este material         *
+			*  está estrictamente prohibido.                                           *
+			*                                                                          *
+			***************************************************************************/
+
+------------------------------------------------------------------------------------------------------------------->
+<html>
+	<head>
+		<!--Las metaetiquetas en HTML son elementos del <head> que proporcionan metadatos sobre el documento HTML, como el autor, la descripción, 
+			las palabras clave y las configuraciones del navegador. A continuación, te proporciono una lista completa de metaetiquetas comunes en HTML, 
+			sus atributos y descripciones.
+			
+			Metaetiquetas Básicas-->
+
+			<!--Descripción del Sitio: name: "description" / content: Descripción breve y concisa del sitio web. Útil para motores de búsqueda.-->
+			<meta name="description" content="Descripción breve del contenido del sitio web.">
+			<!--*Palabras Clave: name: "keywords" / content: Lista de palabras clave relevantes separadas por comas.-->
+			<meta name="keywords" content="palabra1, palabra2, palabra3"> <!--Estas palabras clave eran utilizadas por los motores de búsqueda para indexar y clasificar 
+			el contenido de la página web. Sin embargo, su uso ha disminuido significativamente con el tiempo debido a cambios en los algoritmos de los motores de búsqueda, 
+			especialmente Google, que dejó de utilizar esta metaetiqueta para el ranking de búsquedas debido a su abuso y a la manipulación por parte de los webmasters.
+			*Usar palabras clave de manera natural y relevante dentro del contenido de la página, en los títulos, subtítulos, y metaetiquetas como title y description.
+			Aunque la metaetiqueta description tampoco afecta directamente los rankings, se muestra a menudo en los resultados de búsqueda y puede influir en las tasas de clics.-->
+			<!--Autor: name: "author" / content: Nombre del autor del documento-->
+			<meta name="author" content="Nombre del autor o de la empresa.">
+			<!--Viewport: name: "viewport" / content: Configuración para controlar el diseño en navegadores móviles.-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configuración Básica y Común-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!--Deshabilitar el Zoom del Usuario-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!--Definir Escalas Mínimas y Máximas-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> <!--Compatibilidad con Navegadores Antiguos-->
+			<!--Charset: charset: "UTF-8" es el valor más común para especificar la codificación de caracteres.-->
+			<meta charset="UTF-8">
+			<!--Metaetiquetas de Redirección y Control de Cache.
+			Redirección: http-equiv: "refresh" / content: Tiempo en segundos y URL de redirección.-->
+			<meta http-equiv="refresh" content="30;url=http://www.ejemplo.com/">
+			<!--Control de Cache: http-equiv: "cache-control", "pragma", "expires" / content: Configuraciones para el control del cache del navegador.-->
+			<meta http-equiv="cache-control" content="no-cache">
+			<meta http-equiv="pragma" content="no-cache">
+			<meta http-equiv="expires" content="0">
+			<!--Metaetiquetas de Redes Sociales y Compartición.
+			Facebook Open Graph: property: "og", "og", "og", "og" / content: Título, descripción, imagen y URL para la compartición en Facebook.-->
+			<meta property="og:title" content="Título del contenido">
+			<meta property="og:description" content="Descripción del contenido">
+			<meta property="og:image" content="URL de la imagen">
+			<meta property="og:url" content="URL del contenido">
+			<!--Twitter Cards: name: "twitter", "twitter", "twitter", "twitter" / content: Tipo de tarjeta, título, descripción y URL de la imagen para la compartición en Twitter.-->
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:title" content="Título del contenido">
+			<meta name="twitter:description" content="Descripción del contenido">
+			<meta name="twitter:image" content="URL de la imagen">
+			<!--Pinterest Rich Pins-->
+			<meta name="pinterest-rich-pin" content="true">
+			<!--Metaetiquetas SEO y Robots.
+			Robots: name: "robots" / content: Instrucciones para los motores de búsqueda sobre cómo indexar la página.-->
+			<meta name="robots" content="index, follow">
+			<meta name="robots" content="noindex, nofollow">
+			<meta name="googlebot" content="index, follow"> <!--Googlebot-->
+			<meta name="bingbot" content="index, follow"> <!--Bingbot-->
+			<meta name="referrer" content="no-referrer"> <!--referrer-->
+			<!--Canonical: rel: "canonical" / href: URL canónica para evitar contenido duplicado.-->
+			<link rel="canonical" href="URL canónica">
+			<!--Metaetiquetas de Seguridad.
+			Content Security Policy: http-equiv: "Content-Security-Policy" / content: Directivas de política de seguridad de contenido.-->
+			<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+			<!--X-UA-Compatible: http-equiv: "X-UA-Compatible" / content: Especifica que el contenido debe ser compatible con la última versión de IE.-->
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> <!--Strict-Transport-Security (HSTS)-->
+			<!--Referrer Policy: name: "referrer" / content: Política de referencias para controlar cómo se envían las referencias.-->
+			<meta name="referrer" content="no-referrer">
+			<!--Metaetiquetas Misceláneas.
+			Tema de Color (para navegadores móviles): name: "theme-color" / content: Color para la barra de herramientas del navegador móvil.-->
+			<meta name="theme-color" content="#ffffff">
+			<!--Favicon: rel: "icon" / href: URL del icono del sitio web.-->
+			<link rel="icon" href="URL del favicon">
+			<!--Verificación de Sitio (Google, Bing, etc.): name: "google-site-verification", "msvalidate.01" / content: Código de verificación proporcionado por el servicio 
+			respectivo.-->
+			<meta name="google-site-verification" content="código_de_verificación">
+			<meta name="msvalidate.01" content="código_de_verificación">
+			<meta name="yandex-verification" content="código_de_verificación"> <!--Yandex-->
+			<meta name="baidu-site-verification" content="código_de_verificación"> <!--Baidu-->
+			<!--Estas metaetiquetas son fundamentales para optimizar un sitio web tanto para la experiencia del usuario como para el rendimiento en motores de búsqueda. 
+			Usar las metaetiquetas adecuadas puede mejorar la visibilidad, la seguridad y la accesibilidad de tu sitio web.-->
+
+			<!--Hay muchas más metaetiquetas que pueden ser útiles dependiendo del contexto y las necesidades específicas del sitio web. 
+			A continuación, te presento una lista adicional y más exhaustiva de metaetiquetas que no fueron cubiertas previamente.
+			-->
+			<!--Dublin Core Metadata: -->
+			<meta name="DC.title" content="Título del contenido">
+			<meta name="DC.creator" content="Nombre del creador">
+			<meta name="DC.subject" content="Asunto del contenido">
+			<meta name="DC.description" content="Descripción del contenido">
+			<meta name="DC.publisher" content="Nombre del editor">
+			<meta name="DC.contributor" content="Nombre del colaborador">
+			<meta name="DC.date" content="Fecha de creación">
+			<meta name="DC.type" content="Tipo de recurso">
+			<meta name="DC.format" content="Formato del recurso">
+			<meta name="DC.identifier" content="Identificador del recurso">
+			<meta name="DC.source" content="Fuente del recurso">
+			<meta name="DC.language" content="Idioma del contenido">
+			<meta name="DC.relation" content="Relación con otros recursos">
+			<meta name="DC.coverage" content="Cobertura del contenido">
+			<meta name="DC.rights" content="Derechos sobre el contenido">
+			<!--Metaetiquetas de Aplicaciones Web Progresivas (PWA).
+			Nombre de la Aplicación-->
+			<meta name="application-name" content="Nombre de la aplicación">
+			<!--Color de la Barra de Navegación en Móviles (Android)-->
+			<meta name="theme-color" content="#000000">
+			<!--Modo a Pantalla Completa-->
+			<meta name="mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<!--Nombre de la Aplicación en iOS-->
+			<meta name="apple-mobile-web-app-title" content="Nombre de la aplicación">
+			<!--Estilo de la Barra de Estado en iOS-->
+			<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+			<!--Metaetiquetas de Propiedad.
+			Propiedad de Aplicaciones-->
+			<meta name="apple-itunes-app" content="app-id=APP_ID, affiliate-data=AFFILIATE_DATA, app-argument=APP_ARGUMENT">
+			<!--Google Play App-->
+			<meta name="google-play-app" content="app-id=com.example.app">
+			<!--Metaetiquetas de Rendimiento y Prioridad de Recursos.
+			DNS Prefetching-->
+			<link rel="dns-prefetch" href="//example.com">
+			<!--Preconexión-->
+			<link rel="preconnect" href="https://example.com">
+			<!--Precarga-->
+			<link rel="preload" href="path/to/resource" as="resource-type">
+			<!--Prefetch-->
+			<link rel="prefetch" href="path/to/resource">
+			<!--Metaetiquetas de Análisis y Seguimiento.
+			Google Analytics-->
+			<meta name="google-analytics" content="tracking-id">
+			<!--Google Tag Manager-->
+			<meta name="google-tag-manager" content="container-id">
+			<!--Microsoft Clarity-->
+			<meta name="msclarity" content="tracking-id">
+			<!--Metaetiquetas para el Control de Compatibilidad.
+			Compatibilidad con Windows-->
+			<meta name="msapplication-TileColor" content="#ffffff">
+			<meta name="msapplication-TileImage" content="path/to/tile-image.png">
+			<meta name="msapplication-config" content="path/to/browserconfig.xml">
+			<!--Compatibilidad con Apple-->
+			<meta name="apple-mobile-web-app-capable" content="yes">
+
+			<!--Existen metaetiquetas y configuraciones específicas que pueden ser relevantes para aplicaciones WebXR. Aunque no hay una amplia gama de metaetiquetas 
+			específicas para WebXR como tal, las configuraciones y metaetiquetas relevantes están relacionadas con la experiencia inmersiva, la realidad virtual (VR), 
+			la realidad aumentada (AR), y la optimización del rendimiento. A continuación, se describen algunas configuraciones y mejores prácticas que se pueden aplicar 
+			en un contexto de WebXR.
+			
+			Metaetiquetas y Configuraciones para WebXR
+			Viewport: Configuración esencial para garantizar que la experiencia inmersiva se adapte correctamente a la pantalla del dispositivo.-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+			<!--Immersive Mode: Para asegurar que la aplicación web se pueda ver en modo inmersivo.-->
+			<meta name="mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+			<!--WebXR Device API: Para habilitar la compatibilidad con dispositivos de realidad virtual y aumentada.-->
+			<meta name="xr" content="webxr">
+			<!--WebXR AR Module: Para habilitar la compatibilidad con la realidad aumentada.-->
+			<meta name="xr" content="webxr ar">
+			<!--WebXR VR Module: Para habilitar la compatibilidad con la realidad virtual.-->
+			<meta name="xr" content="webxr vr">
+			<!--WebXR Session Mode: Para especificar el modo de sesión de WebXR (inmersivo, ar, vr).-->
+			<meta name="xr" content="webxr session mode">
+			<!--WebXR Features: Para especificar las características de WebXR que se utilizan en la aplicación.-->
+			<meta name="xr" content="webxr features">
+			<!--WebXR Performance: Para optimizar el rendimiento de la aplicación WebXR.-->
+			<meta name="xr" content="webxr performance">
+			<!--WebXR Best Practices: Para seguir las mejores prácticas de desarrollo de aplicaciones WebXR.-->
+			<meta name="xr" content="webxr best practices">
+			<!--WebXR Security: Para garantizar la seguridad de la aplicación WebXR.-->
+			<meta name="xr" content="webxr security">
+			<!--WebXR Accessibility: Para mejorar la accesibilidad de la aplicación WebXR.-->
+			<meta name="xr" content="webxr accessibility">
+			<!--WebXR User Experience: Para optimizar la experiencia del usuario en la aplicación WebXR.-->
+			<meta name="xr" content="webxr user experience">
+			<!--WebXR Testing: Para realizar pruebas y depuración de la aplicación WebXR.-->
+			<meta name="xr" content="webxr testing">
+			<!--WebXR Deployment: Para implementar y distribuir la aplicación WebXR.-->
+			<meta name="xr" content="webxr deployment">
+			<!--WebXR Monetization: Para monetizar la aplicación WebXR.-->
+			<meta name="xr" content="webxr monetization">
+			<!--WebXR Analytics: Para realizar un seguimiento y análisis de la aplicación WebXR.-->
+			<meta name="xr" content="webxr analytics">
+			<!--WebXR Community: Para participar en la comunidad de desarrollo de aplicaciones WebXR.-->
+			<meta name="xr" content="webxr community">
+			<!--WebXR Resources: Para acceder a recursos y documentación sobre el desarrollo de aplicaciones WebXR.-->
+			<meta name="xr" content="webxr resources">
+			<!--WebXR Tutorials: Para acceder a tutoriales y guías sobre el desarrollo de aplicaciones WebXR.-->
+			<meta name="xr" content="webxr tutorials">
+			<!--WebXR Examples: Para acceder a ejemplos y demos de aplicaciones WebXR.-->
+			<meta name="xr" content="webxr examples">
+			<!--WebXR Showcase: Para mostrar y promocionar aplicaciones WebXR.-->
+			<meta name="xr" content="webxr showcase">
+			<!--WebXR Events: Para participar en eventos y conferencias sobre WebXR.-->
+			<meta name="xr" content="webxr events">
+			<!--WebXR News: Para estar al tanto de las últimas noticias y novedades sobre WebXR.-->
+			<meta name="xr" content="webxr news">
+			<!--WebXR Updates: Para recibir actualizaciones y notificaciones sobre WebXR.-->
+			<meta name="xr" content="webxr updates">
+			<!--WebXR Feedback: Para enviar comentarios y sugerencias sobre WebXR.-->
+			<meta name="xr" content="webxr feedback">
+			<!--WebXR Contact: Para ponerse en contacto con el equipo de desarrollo de WebXR.-->
+			<meta name="xr" content="webxr contact">
+			<!--WebXR Support: Para obtener asistencia y soporte técnico sobre WebXR.-->
+			<meta name="xr" content="webxr support">
+			<!--WebXR FAQ: Para acceder a preguntas frecuentes sobre WebXR.-->
+			<meta name="xr" content="webxr faq">
+			<!--WebXR Legal: Para consultar la información legal y los términos de uso de WebXR.-->
+			<meta name="xr" content="webxr legal">
+			<!--WebXR Privacy: Para conocer la política de privacidad y protección de datos de WebXR.-->
+			<meta name="xr" content="webxr privacy">
+			<!--WebXR Terms: Para leer los términos y condiciones de uso de WebXR.-->
+			<meta name="xr" content="webxr terms">
+			<!--WebXR License: Para consultar la licencia de uso de WebXR.-->
+			<meta name="xr" content="webxr license">
+			<!--WebXR Attribution: Para atribuir y dar crédito a los recursos y tecnologías utilizados en la aplicación WebXR.-->
+			<meta name="xr" content="webxr attribution">
+			<!--WebXR Acknowledgements: Para reconocer y agradecer a las personas y organizaciones que contribuyeron a la aplicación WebXR.-->
+			<meta name="xr" content="webxr acknowledgements">
+			<!--WebXR Credits: Para mostrar los créditos y la información de contacto de la aplicación WebXR.-->
+			<meta name="xr" content="webxr credits">
+			<!--WebXR About: Para proporcionar información sobre la aplicación WebXR y su propósito.-->
+			<meta name="xr" content="webxr about">
+			<!--WebXR Help: Para acceder a la ayuda y la documentación de la aplicación WebXR.-->
+			<meta name="xr" content="webxr help">
+			<!--WebXR Feedback: Para enviar comentarios y sugerencias sobre la aplicación WebXR.-->
+			<meta name="xr" content="webxr feedback">
+			<!--WebXR Contact: Para ponerse en contacto con el equipo de desarrollo de la aplicación WebXR.-->
+			<meta name="xr" content="webxr contact">
+			<!--WebXR Support: Para obtener asistencia y soporte técnico sobre la aplicación WebXR.-->
+			<meta name="xr" content="webxr support">
+			
+			<!--Además de las metaetiquetas HTML, gran parte de la configuración para WebXR se realiza a través de JavaScript en el entorno de la aplicación web.-->
+	</head>
+</html>
