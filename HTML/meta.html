@@ -65,10 +65,6 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<meta http-equiv="expires" content="Wed, 21 Oct 2023 07:28:00 GMT">
 			<meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate, max-age=3600">
 			<meta http-equiv="etag" content="33a64df551425fcc55e4d42a148795d9f25f89d4"><!--Mejor en htaccess-->
-
-
-
-			
 			<!--Metaetiquetas de Redes Sociales y Compartición.
 			Facebook Open Graph: property: "og", "og", "og", "og" / content: Título, descripción, imagen y URL para la compartición en Facebook.-->
 			<meta property="og:title" content="Título del contenido">
@@ -89,7 +85,7 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<meta name="googlebot" content="index, follow"> <!--Googlebot-->
 			<meta name="bingbot" content="index, follow"> <!--Bingbot-->
 			<meta name="referrer" content="no-referrer"> <!--referrer-->
-			<!--Canonical: rel: "canonical" / href: URL canónica para evitar contenido duplicado.-->
+			<!--Canonical: rel: "canonical" / href: URL canónica para evitar contenido duplicado. Pagina importante en SEO-->
 			<link rel="canonical" href="URL canónica">
 			<!--Metaetiquetas de Seguridad.
 			Content Security Policy: http-equiv: "Content-Security-Policy" / content: Directivas de política de seguridad de contenido.-->
@@ -116,7 +112,7 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<!--Hay muchas más metaetiquetas que pueden ser útiles dependiendo del contexto y las necesidades específicas del sitio web. 
 			A continuación, te presento una lista adicional y más exhaustiva de metaetiquetas que no fueron cubiertas previamente.
 			-->
-			<!--Dublin Core Metadata: -->
+			<!--Dublin Core Metadata (DCMI): -->
 			<meta name="DC.title" content="Título del contenido">
 			<meta name="DC.creator" content="Nombre del creador">
 			<meta name="DC.subject" content="Asunto del contenido">
@@ -128,10 +124,10 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<meta name="DC.format" content="Formato del recurso">
 			<meta name="DC.identifier" content="Identificador del recurso">
 			<meta name="DC.source" content="Fuente del recurso">
-			<meta name="DC.language" content="Idioma del contenido">
+			<meta name="DC.language" content="es">
 			<meta name="DC.relation" content="Relación con otros recursos">
-			<meta name="DC.coverage" content="Cobertura del contenido">
-			<meta name="DC.rights" content="Derechos sobre el contenido">
+			<meta name="DC.coverage" content="2024">
+			<meta name="DC.rights" content="Todos los derechos reservados">
 			<!--Metaetiquetas de Aplicaciones Web Progresivas (PWA).
 			Nombre de la Aplicación-->
 			<meta name="application-name" content="Nombre de la aplicación">
@@ -150,14 +146,27 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<!--Google Play App-->
 			<meta name="google-play-app" content="app-id=com.example.app">
 			<!--Metaetiquetas de Rendimiento y Prioridad de Recursos.
-			DNS Prefetching-->
+			DNS Prefetching: Indica al navegador que realice una búsqueda DNS anticipada para un dominio específico.
+			Uso: Reduce el tiempo de búsqueda DNS para recursos de terceros.-->
 			<link rel="dns-prefetch" href="//example.com">
-			<!--Preconexión-->
+			<!--Preconexión: Solicita al navegador que realice la conexión inicial (DNS, TCP, TLS) a un origen específico lo antes posible.
+			Uso: Útil para optimizar la carga de recursos de terceros (CDNs, APIs).-->
 			<link rel="preconnect" href="https://example.com">
-			<!--Precarga-->
+			<!--Precarga: Indica al navegador que cargue recursos específicos lo antes posible-->
 			<link rel="preload" href="path/to/resource" as="resource-type">
-			<!--Prefetch-->
+			<link rel="preload" href="styles.css" as="style">
+			<link rel="preload" href="script.js" as="script">
+			<link rel="preload" href="image.jpg" as="image">
+			<!--Prefetch: Indica al navegador que un recurso probablemente será necesario en un futuro cercano y debería ser precargado-->
 			<link rel="prefetch" href="path/to/resource">
+			<link rel="prefetch" href="next-page.html">
+			<link rel="prefetch" href="next-script.js" as="script">
+			<!--Prerender: Indica al navegador que renderice una página completa en segundo plano.
+			Uso: Carga y renderiza en segundo plano la siguiente página a la que el usuario probablemente navegue.-->
+			<link rel="prerender" href="next-page.html">
+			<!--Preload con Importancia: Permite establecer la prioridad de los recursos con el atributo importance.
+			Uso: Indica al navegador la importancia relativa de un recurso, ayudando a priorizar su carga.-->
+			<link rel="preload" href="critical-script.js" as="script" importance="high">
 			<!--Metaetiquetas de Análisis y Seguimiento.
 			Google Analytics-->
 			<meta name="google-analytics" content="tracking-id">
@@ -172,7 +181,7 @@ Contenido by PublicAudiovisual XR/QXR20.academy 2007-2024
 			<meta name="msapplication-config" content="path/to/browserconfig.xml">
 			<!--Compatibilidad con Apple-->
 			<meta name="apple-mobile-web-app-capable" content="yes">
-
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 			<!--Existen metaetiquetas y configuraciones específicas que pueden ser relevantes para aplicaciones WebXR. Aunque no hay una amplia gama de metaetiquetas 
 			específicas para WebXR como tal, las configuraciones y metaetiquetas relevantes están relacionadas con la experiencia inmersiva, la realidad virtual (VR), 
 			la realidad aumentada (AR), y la optimización del rendimiento. A continuación, se describen algunas configuraciones y mejores prácticas que se pueden aplicar 
